@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var num=1;
+        function picture(direct){
+            if(direct){
+                if(num==8) return;
+                num++;
+            }
+            else{
+                if(num == 1) return;
+                num--;
+            }
+
+            var imgTag = document.getElementById("photo");
+            imgTag.setAttribute("src","images/pic_"+num+".png");
+        }
+    </script>
+</head>
+<body>
+   <div id="pictureZone">
+    <p><img src="images/pic_1.PNG" id="photo" alt=""></p>
+    <p>
+        <button onclick="picture(0)">이전</button>
+        <button onclick="picture(1)">다음</button>
+    </p>
+   </div>
+</body>
+</html>
